@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+	<listeners><listener class-name="com.BStore.utilities.ExtentReportListner"></listener></listeners>
+  
+  <test name="Test1"  enabled="true">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+	  <class name="com.BStore.testcases.TC_VerifySignupAndLoginTest"/>
+      <class name="com.BStore.testcases.TC_VerifyOrderAllTypeGadgets"/>
+      <class name="com.BStore.testcases.TC_VerifyLoginDataDriven"/>
+      <class name="com.BStore.testcases.TC_VerifySignupDataDriven"/>
+
+    </classes>
+  </test> <!-- Test -->
+  
+    <test name="Test2" enabled="false">
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="com.BStore.testcases.TC_VerifySignupAndLoginTest"/>
+      <class name="com.BStore.testcases.TC_VerifyOrderAllTypeGadgets"/>
+      <class name="com.BStore.testcases.TC_VerifyLoginDataDriven"/>
+      <class name="com.BStore.testcases.TC_VerifySignupDataDriven"/>
+
+    </classes>
+  </test> <!-- Test -->
+  
+    <test name="Test3" enabled="false">
+  <parameter name="browser" value="msedge"></parameter>
+    <classes>
+      <class name="com.BStore.testcases.TC_VerifySignupAndLoginTest"/>
+      <class name="com.BStore.testcases.TC_VerifyOrderAllTypeGadgets"/>
+      <class name="com.BStore.testcases.TC_VerifyLoginDataDriven"/>
+      <class name="com.BStore.testcases.TC_VerifySignupDataDriven"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
